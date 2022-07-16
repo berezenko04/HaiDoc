@@ -136,6 +136,11 @@ p {
 }
 
 /*Responsive*/
+@media screen and (max-width: 1400px) {
+    .container {
+        width: 1140px;
+    }
+}
 
 /* 992px - 1200px*/
 @media screen and (max-width: 1200px) {

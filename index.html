@@ -1,0 +1,655 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HaiDoc</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/input.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              550: "hsl(226, 100%, 55%)",
+              650: "hsl(226, 100%, 65%)",
+            },
+            neutral: {
+              400: "hsl(0, 0%, 41%)",
+              930: "hsl(215, 54%, 93%)",
+              950: "hsl(208, 60%, 95%)",
+              960: "hsl(227, 100%, 96%)",
+              970: "hsl(227, 100%, 97%)",
+            },
+            secondary: {
+              500: "hsl(219, 22%, 51%)",
+              600: "hsl(219, 32%, 58%)",
+            },
+          },
+          boxShadow: {
+            cardShadow:
+              "-5px -4px 9px 2px rgba(255, 255, 255, 0.5), 4px 4px 6px rgba(104, 132, 157, 0.2)",
+          },
+          fontFamily: {
+            Poppins: "'Poppins', sans-serif",
+          },
+          // dropShadow: {
+          //     'checkShadow': "(4px 4px 6px rgba(104, 132, 157, 0.2))"
+          // }
+        },
+      },
+    };
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="hamburger-menu lg:hidden">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        <div class="mt-1">
+          <a href="#" class="font-medium text-[24px]">Hai<span class="text-primary-650 font-bold">Doc</span></a>
+        </div>
+        <div class="menu__box">
+          <p class="font-medium text-[24px]">Hai<span class="text-primary-650 font-bold">Doc</span></p>
+          <ul class="flex flex-col gap-[10px]">
+            <li><a class="menu__item" href="#">Home</a></li>
+            <li><a class="menu__item" href="#">Doctor</a></li>
+            <li><a class="menu__item" href="#">Services</a></li>
+            <li><a class="menu__item" href="#">Review</a></li>
+            <li>
+              <a href="#" class="menu__item">Sign in</a>
+            </li>
+            <li><a href="#" class="menu__item">Sign up</a></li>
+          </ul>
+        </div>
+      </div>
+      <nav class="hidden mt-11 items-center justify-between flex-row flex lg:flex">
+        <div class="flex flex-row gap-24 items-center">
+          <a href="#" class="font-medium text-[24px]">Hai<span class="text-primary-650 font-bold">Doc</span></a>
+          <ul class="list-none text-secondary-500 flex flex-row gap-10">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Doctor</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Review</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-row gap-5 items-center">
+          <a href="#" class="text-secondary-500">Sign in</a>
+          <a href="#"
+            class="bg-primary-650 text-white px-4 py-2 rounded-[10px] transition duration-300 ease-in-out hover:bg-primary-550">Sign
+            up</a>
+        </div>
+      </nav>
+      <div class="flex flex-col justify-between gap-[80px] mt-[60px] items-center sm:items-start lg:flex-row">
+        <div class="max-w-[490px] flex flex-col gap-9">
+          <h1 class="text-secondary-500 text-[34px] font-bold lg:text-[58px]">
+            A Great Place to Receive Care
+          </h1>
+          <p class="text-secondary-600 max-w-[416px] leading-[27px]">
+            Medical Recover is most focused in helping you discover your most
+            beauiful smile
+          </p>
+          <div class="flex flex-col gap-[10px] items-center sm:flex-row xl:flex-row">
+            <a href="#"
+              class="bg-primary-650 font-semibold text-white py-[16px] px-[42px] shadow-cardShadow rounded-[5px] transition duration-300 ease-in-out border-primary-650 border-[2px] hover:bg-primary-550">Get
+              Quote Now</a>
+            <a href="#"
+              class="bg-neutral-950 font-semibold text-primary-650 py-[16px] px-[42px] shadow-cardShadow rounded-[5px] transition duration-300 ease-in-out border-primary-650 border-[2px] hover:bg-neutral-930">Learn
+              More</a>
+          </div>
+        </div>
+        <div>
+          <img src="img/main.png" alt="#" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="step-by-step">
+    <div class="container">
+      <div class="mt-[138px]">
+        <div>
+          <h2 class="text-secondary-500 font-semibold text-[32px] max-w-[342px] text-center mx-[auto]">
+            Step by step to get your solutions
+          </h2>
+        </div>
+        <div class="mt-[46px] pb-[100px] flex flex-col gap-9">
+          <div class="flex flex-col justify-center items-center gap-6 lg:flex-row">
+            <div
+              class="max-w-[346px] rounded-b-[5px] border-t-[3px] border-t-primary-650 bg-neutral-930 flex flex-row gap-6 pt-5 pl-6 pr-[44px] pb-3 shadow-cardShadow">
+              <svg class="w-[60px] h-[60px]" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="17.6653" cy="17.7556" rx="14.332" ry="14.4221" fill="#4D77FF" />
+                <path opacity="0.4"
+                  d="M34.4577 36.5921C33.9009 36.574 33.3715 36.345 32.9756 35.9507L29.5815 31.9836C28.8539 31.3181 28.7944 30.1872 29.4481 29.4481V29.4481C29.7541 29.1385 30.1702 28.9644 30.6042 28.9644C31.0382 28.9644 31.4542 29.1385 31.7602 29.4481L36.0287 32.8635C36.6436 33.4928 36.8333 34.427 36.5131 35.2486C36.1929 36.0703 35.4227 36.6257 34.5466 36.6666L34.4577 36.5921Z"
+                  fill="#4D77FF" />
+              </svg>
+              <div class="flex flex-col gap-2">
+                <h3 class="text-secondary-500 font-semibold">
+                  Check health complaints
+                </h3>
+                <p class="text-secondary-600 text-[12px]">
+                  Check the disease so you can easily choose the right
+                  specialist
+                </p>
+              </div>
+            </div>
+            <div class="bg-neutral-930 rounded-[8px] px-4 py-[13px] shadow-cardShadow hidden lg:block">
+              <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_ii_2_372)">
+                  <path d="M1.62184 1.27051L7.88843 7.90572L1.62184 14.5409" stroke="url(#paint0_linear_2_372)"
+                    stroke-opacity="0.8" stroke-width="2.08886" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <filter id="filter0_ii_2_372" x="0.0551768" y="-0.296142" width="9.3999" height="16.4038"
+                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha" />
+                    <feOffset dx="-0.522216" dy="-0.522216" />
+                    <feGaussianBlur stdDeviation="0.261108" />
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.4 0" />
+                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_2_372" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha" />
+                    <feOffset dx="0.522216" dy="0.522216" />
+                    <feGaussianBlur stdDeviation="0.261108" />
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                    <feColorMatrix type="matrix"
+                      values="0 0 0 0 0.127604 0 0 0 0 0.267969 0 0 0 0 0.408333 0 0 0 0.4 0" />
+                    <feBlend mode="normal" in2="effect1_innerShadow_2_372" result="effect2_innerShadow_2_372" />
+                  </filter>
+                  <linearGradient id="paint0_linear_2_372" x1="7.88843" y1="4.03518" x2="-42.5009" y2="37.8086"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#48647D" />
+                    <stop offset="0.234375" stop-color="#6B8299" />
+                    <stop offset="0.442708" stop-color="#DAE2EB" />
+                    <stop offset="0.682292" stop-color="#8CA2B7" />
+                    <stop offset="1" stop-color="#EDF2F7" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div
+              class="max-w-[346px] rounded-b-[5px] border-t-[3px] border-t-primary-650 bg-neutral-930 flex flex-row gap-6 pt-5 pl-6 pr-[44px] pb-3 shadow-cardShadow">
+              <svg class="w-[60px] h-[60px]" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.9947 25.291C12.8064 25.291 6.66638 26.4243 6.66638 30.9577C6.66638 35.4927 12.768 36.666 19.9947 36.666C27.1831 36.666 33.3231 35.5343 33.3231 30.9993C33.3231 26.4643 27.2231 25.291 19.9947 25.291"
+                  fill="#4D77FF" />
+                <path opacity="0.4"
+                  d="M19.9947 20.973C24.8913 20.973 28.8147 17.048 28.8147 12.153C28.8147 7.25801 24.8913 3.33301 19.9947 3.33301C15.0997 3.33301 11.1747 7.25801 11.1747 12.153C11.1747 17.048 15.0997 20.973 19.9947 20.973"
+                  fill="#4D77FF" />
+              </svg>
+              <div class="flex flex-col gap-2">
+                <h3 class="text-secondary-500 font-semibold">
+                  Choose doctor Specialist
+                </h3>
+                <p class="text-secondary-600 text-[12px]">
+                  Check the disease so you can easily choose the right
+                  specialist
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center items-center gap-6 lg:flex-row">
+            <div
+              class="max-w-[346px] rounded-b-[5px] border-t-[3px] border-t-primary-650 bg-neutral-930 flex flex-row gap-6 pt-5 pl-6 pr-[44px] pb-3 shadow-cardShadow">
+              <svg class="w-[60px] h-[60px]" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.4"
+                  d="M21.6271 5.18919L25.3379 12.6463C25.6113 13.1866 26.1331 13.5618 26.7349 13.6452L35.07 14.8591C35.5568 14.9275 35.9986 15.1843 36.297 15.5761C36.592 15.963 36.7187 16.4533 36.647 16.9352C36.5887 17.3354 36.4003 17.7056 36.1119 17.989L30.0723 23.8437C29.6305 24.2522 29.4305 24.8575 29.5372 25.4495L31.0242 33.6803C31.1825 34.6742 30.5241 35.6113 29.5372 35.7998C29.1304 35.8648 28.7137 35.7964 28.3469 35.6097L20.912 31.736C20.3602 31.4576 19.7084 31.4576 19.1566 31.736L11.7217 35.6097C10.8082 36.0949 9.67625 35.7647 9.16781 34.8643C8.97943 34.5058 8.91275 34.0972 8.97443 33.6987L10.4614 25.4662C10.5681 24.8759 10.3664 24.2672 9.9263 23.8587L3.88667 18.0074C3.16819 17.3137 3.14652 16.1714 3.83833 15.4527C3.85333 15.4377 3.87 15.4211 3.88667 15.4044C4.1734 15.1126 4.55015 14.9275 4.9569 14.8791L13.292 13.6635C13.8922 13.5785 14.4139 13.2066 14.689 12.663L18.2664 5.18919C18.5848 4.54887 19.245 4.15033 19.9618 4.16701H20.1852C20.807 4.24205 21.3488 4.62724 21.6271 5.18919"
+                  fill="#4D77FF" />
+                <path
+                  d="M19.9867 31.5284C19.6638 31.5384 19.3493 31.6251 19.0664 31.7802L11.6678 35.6451C10.7626 36.0771 9.67925 35.7418 9.1717 34.8761C8.98366 34.5225 8.91543 34.1172 8.97867 33.7202L10.4564 25.5051C10.5562 24.9079 10.3565 24.3008 9.92221 23.8804L3.87988 18.0306C3.16265 17.3284 3.14934 16.1758 3.85159 15.4569C3.86157 15.4468 3.86989 15.4385 3.87988 15.4302C4.1661 15.1466 4.53553 14.9598 4.93325 14.9014L13.2754 13.6737C13.8794 13.597 14.4036 13.22 14.6699 12.6729L18.2959 5.10503C18.6404 4.49453 19.3011 4.1309 20 4.16927C19.9867 4.66467 19.9867 31.1914 19.9867 31.5284"
+                  fill="#4D77FF" />
+              </svg>
+              <div class="flex flex-col gap-2">
+                <h3 class="text-secondary-500 font-semibold">
+                  Get your solutions
+                </h3>
+                <p class="text-secondary-600 text-[12px]">
+                  Check the disease so you can easily choose the right
+                  specialist
+                </p>
+              </div>
+            </div>
+            <div class="bg-neutral-930 rounded-[8px] px-4 py-[13px] shadow-cardShadow hidden lg:block">
+              <svg class="rotate-180" width="9" height="16" viewBox="0 0 9 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_ii_2_372)">
+                  <path d="M1.62184 1.27051L7.88843 7.90572L1.62184 14.5409" stroke="url(#paint0_linear_2_372)"
+                    stroke-opacity="0.8" stroke-width="2.08886" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <filter id="filter0_ii_2_372" x="0.0551768" y="-0.296142" width="9.3999" height="16.4038"
+                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha" />
+                    <feOffset dx="-0.522216" dy="-0.522216" />
+                    <feGaussianBlur stdDeviation="0.261108" />
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.4 0" />
+                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_2_372" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha" />
+                    <feOffset dx="0.522216" dy="0.522216" />
+                    <feGaussianBlur stdDeviation="0.261108" />
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                    <feColorMatrix type="matrix"
+                      values="0 0 0 0 0.127604 0 0 0 0 0.267969 0 0 0 0 0.408333 0 0 0 0.4 0" />
+                    <feBlend mode="normal" in2="effect1_innerShadow_2_372" result="effect2_innerShadow_2_372" />
+                  </filter>
+                  <linearGradient id="paint0_linear_2_372" x1="7.88843" y1="4.03518" x2="-42.5009" y2="37.8086"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#48647D" />
+                    <stop offset="0.234375" stop-color="#6B8299" />
+                    <stop offset="0.442708" stop-color="#DAE2EB" />
+                    <stop offset="0.682292" stop-color="#8CA2B7" />
+                    <stop offset="1" stop-color="#EDF2F7" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div
+              class="max-w-[346px] rounded-b-[5px] border-t-[3px] border-t-primary-650 bg-neutral-930 flex flex-row gap-6 pt-5 pl-6 pr-[44px] pb-3 shadow-cardShadow">
+              <svg class="w-[60px] h-[60px]" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5 27.7835V15.0952H35V27.8852C35 33.1169 31.7069 36.3335 26.438 36.3335H13.5456C8.32602 36.3335 5 33.0502 5 27.7835ZM13.2656 23.6835C12.5082 23.7185 11.8825 23.1169 11.8496 22.3519C11.8496 21.5852 12.4424 20.9519 13.1998 20.9169C13.9407 20.9169 14.5499 21.5019 14.5664 22.2502C14.5993 23.0185 14.0066 23.6519 13.2656 23.6835ZM20.0329 23.6835C19.2755 23.7185 18.6498 23.1169 18.6169 22.3519C18.6169 21.5852 19.2097 20.9519 19.9671 20.9169C20.708 20.9169 21.3172 21.5019 21.3337 22.2502C21.3666 23.0185 20.7739 23.6519 20.0329 23.6835ZM26.7508 29.8169C25.9934 29.8002 25.3842 29.1669 25.3842 28.4002C25.3677 27.6335 25.9769 27.0019 26.7344 26.9852H26.7508C27.5247 26.9852 28.1504 27.6185 28.1504 28.4002C28.1504 29.1835 27.5247 29.8169 26.7508 29.8169ZM18.6169 28.4002C18.6498 29.1669 19.2755 29.7685 20.0329 29.7335C20.7739 29.7019 21.3666 29.0685 21.3337 28.3019C21.3172 27.5519 20.708 26.9669 19.9671 26.9669C19.2097 27.0019 18.6169 27.6335 18.6169 28.4002ZM11.8332 28.4002C11.8661 29.1669 12.4918 29.7685 13.2492 29.7335C13.9901 29.7019 14.5829 29.0685 14.5499 28.3019C14.5335 27.5519 13.9243 26.9669 13.1833 26.9669C12.4259 27.0019 11.8332 27.6335 11.8332 28.4002ZM25.4007 22.3352C25.4007 21.5685 25.9934 20.9519 26.7508 20.9352C27.4918 20.9352 28.0845 21.5335 28.1175 22.2685C28.1339 23.0352 27.5412 23.6685 26.8002 23.6835C26.0428 23.7002 25.4171 23.1169 25.4007 22.3519V22.3352Z"
+                  fill="#4D77FF" />
+                <path opacity="0.4"
+                  d="M5.00562 15.0951C5.02702 14.1167 5.10935 12.1751 5.26412 11.5501C6.05446 8.03506 8.73833 5.80173 12.5748 5.4834H27.4266C31.2301 5.8184 33.9469 8.06673 34.7372 11.5501C34.8904 12.1584 34.9727 14.1151 34.9941 15.0951H5.00562Z"
+                  fill="#4D77FF" />
+                <path
+                  d="M13.8414 10.65C14.5659 10.65 15.1093 10.1017 15.1093 9.36667V4.285C15.1093 3.55 14.5659 3 13.8414 3C13.117 3 12.5736 3.55 12.5736 4.285V9.36667C12.5736 10.1017 13.117 10.65 13.8414 10.65"
+                  fill="#4D77FF" />
+                <path
+                  d="M26.1582 10.65C26.8662 10.65 27.4261 10.1017 27.4261 9.36667V4.285C27.4261 3.55 26.8662 3 26.1582 3C25.4337 3 24.8904 3.55 24.8904 4.285V9.36667C24.8904 10.1017 25.4337 10.65 26.1582 10.65"
+                  fill="#4D77FF" />
+              </svg>
+              <div class="flex flex-col gap-2">
+                <h3 class="text-secondary-500 font-semibold">
+                  Make a Schedule
+                </h3>
+                <p class="text-secondary-600 text-[12px]">
+                  Check the disease so you can easily choose the right
+                  specialist
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="find-doctor">
+    <div class="container">
+      <div class="flex flex-col gap-[120px] items-center lg:flex-row xl:gap-[228px]">
+        <div class="flex flex-col gap-[26px] max-w-[580px] items-start">
+          <h2 class="font-semibold text-[32px] text-secondary-500 max-w-[520px] sm:text-left">
+            Find the right doctor according to your complaint
+          </h2>
+          <p class="text-secondary-600 text-[14px] max-w-[580px] leading-[25px]">
+            HealthCare.ly is a free, health app that goes beyond matching you
+            with doctors. It actively helps you find the right doctor based on
+            your medical and personal needs and connects you with your
+            HealthCarely community for ongoing support throughout your journey
+            to healthier living.
+          </p>
+          <ul class="flex flex-col gap-[14px]">
+            <li class="flex flex-row text-secondary-500 text-[14px] font-semibold gap-3 items-center">
+              <svg class="shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="12" fill="#4D77FF" />
+                <path d="M17.3334 8L10 15.3333L6.66669 12" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              100% free app designed to help you find the right doctor for
+              you.
+            </li>
+            <li class="flex flex-row text-secondary-500 text-[14px] font-semibold gap-3 items-center">
+              <svg class="w-[24px] h-[24px]" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="12" fill="#4D77FF" />
+                <path d="M17.3334 8L10 15.3333L6.66669 12" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              Available 900 doctors specialist
+            </li>
+          </ul>
+          <a href="#"
+            class="bg-primary-650 text-white py-[16px] px-[44px] rounded-[10px] transition duration-300 ease-in-out shadow-cardShadow hover:bg-primary-550">See
+            the Doctors</a>
+        </div>
+        <div class="bg-neutral-930 shadow-cardShadow max-w-[200px] py-[18px] px-[25px] rounded-[10px]">
+          <div class="flex flex-col">
+            <p class="font-semibold text-[14px] text-black font-Poppins">
+              Available Doctors
+            </p>
+            <p class="text-neutral-400 text-[12px]">Select Doctors</p>
+          </div>
+
+          <div class="pt-5 flex flex-col gap-5">
+            <div class="flex flex-row gap-[14px] items-center">
+              <img src="img/avatar1.png" alt="#" />
+              <div>
+                <p class="font-semibold text-[14px] text-black font-Poppins">
+                  Dr. Adinda
+                </p>
+                <p class="text-neutral-400 text-[12px]">Eye Specialist</p>
+              </div>
+            </div>
+            <div class="flex flex-row gap-[14px] items-center">
+              <img src="img/avatar2.png" alt="#" />
+              <div>
+                <p class="font-semibold text-[14px] text-black font-Poppins">
+                  Dr. Jackson
+                </p>
+                <p class="text-neutral-400 text-[12px]">Ear Specialist</p>
+              </div>
+            </div>
+            <a href="#"
+              class="rounded-[10px] bg-neutral-960 text-primary-650 px-[28px] py-2 font-semibold transition all ease-in-out hover:bg-neutral-970">Find
+              Doctor</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="make-schedule">
+    <div class="container">
+      <div class="mt-[176px] flex flex-col gap-[105px] items-start lg:flex-row">
+        <div>
+          <img src="img/schedule.png" alt="#" />
+        </div>
+        <div class="max-w-[510px] flex flex-col gap-[26px] items-start">
+          <h2 class="font-semibold text-[32px] text-secondary-500">
+            Make a schedule in advance with the available doctor
+          </h2>
+          <p class="text-secondary-600 text-[14px] leading-[25px]">
+            Healthcare is a very painful process, especially if you’re not
+            taking care of your health and having regular check-ups.
+            HealhtyCarely makes it easier for everyone to schedule a doctor’s
+            appointment.
+          </p>
+          <ul class="flex flex-col gap-4 text-secondary-500 text-[14px] font-semibold">
+            <li class="flex flex-row gap-3 items-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="12" fill="#4D77FF" />
+                <path d="M17.3334 8L10 15.3333L6.66669 12" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              Make a schedule online is easy
+            </li>
+            <li class="flex flex-row gap-3 items-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="12" fill="#4D77FF" />
+                <path d="M17.3334 8L10 15.3333L6.66669 12" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              Easy to connect with doctor
+            </li>
+          </ul>
+          <a href="#"
+            class="bg-primary-650 text-white px-9 py-4 rounded-[10px] font-semibold transition all ease-in-out hover:bg-primary-550">Make
+            Schedule Now!</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefit">
+    <div class="container">
+      <div class="mt-[140px]">
+        <h2 class="font-semibold text-[32px] text-secondary-500 max-w-[440px] mx-auto text-center">
+          We’re employee benefit at 7500+ hospital
+        </h2>
+        <div class="mt-[50px] flex flex-col justify-center items-center gap-[30px] lg:flex-row">
+          <div
+            class="bg-neutral-930 border-t-[3px] border-t-primary-650 px-[78px] py-[50px] max-w-[290px] w-[100%] rounded-b-[10px] items-center text-center shadow-cardShadow">
+            <p class="font-bold text-secondary-500 text-[32px] font-Poppins">
+              900+
+            </p>
+            <div class="mt-3">
+              <p class="font-semibold font-Poppins text-secondary-500 text-[14px]">
+                Verified Specialist
+              </p>
+              <p class="text-[12px] text-secondary-600">Highly Verified</p>
+            </div>
+          </div>
+          <div
+            class="bg-neutral-930 border-t-[3px] border-t-primary-650 px-[78px] py-[50px] max-w-[290px] w-[100%] rounded-b-[10px] items-center text-center shadow-cardShadow">
+            <p class="font-bold text-secondary-500 text-[32px] font-Poppins">
+              45000+
+            </p>
+            <div class="mt-3">
+              <p class="font-semibold font-Poppins text-secondary-500 text-[14px]">
+                Happy Costumers
+              </p>
+              <p class="text-[12px] text-secondary-600">Highly Performance</p>
+            </div>
+          </div>
+          <div
+            class="bg-neutral-930 border-t-[3px] border-t-primary-650 px-[78px] py-[50px] max-w-[290px] w-[100%] rounded-b-[10px] items-center text-center shadow-cardShadow">
+            <p class="font-bold text-secondary-500 text-[32px] font-Poppins">
+              99,7%
+            </p>
+            <div class="mt-3">
+              <p class="font-semibold font-Poppins text-secondary-500 text-[14px]">
+                Positive Feedback
+              </p>
+              <p class="text-[12px] text-secondary-600">Costumers Approve</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feedback">
+    <div class="container">
+      <div class="mt-[210px] text-center pb-[90px]">
+        <div class="flex flex-col gap-[10px] max-w-[370px] mx-auto">
+          <h2 class="font-semibold text-[32px] text-secondary-500">
+            Our patients feedback about us
+          </h2>
+          <p class="text-[14px] text-secondary-600">
+            their impression after using this application
+          </p>
+        </div>
+        <p class="mt-[80px] max-w-[560px] font-medium text-[25px] leading-[40px] text-secondary-500 mx-auto">
+          Healthycarely is an website and mobile app for you to feel better or
+          get medical help. We offer you a 24/7 doctor service with no
+          appointment needed
+        </p>
+        <div class="mt-[56px] flex flex-row gap-[60px] mx-auto justify-center items-center xl:gap-[100px]">
+          <a href="#" class="bg-neutral-930 rounded-[8px] px-4 py-[13px] shadow-cardShadow">
+            <svg class="rotate-180" width="9" height="16" viewBox="0 0 9 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_ii_2_372)">
+                <path d="M1.62184 1.27051L7.88843 7.90572L1.62184 14.5409" stroke="url(#paint0_linear_2_372)"
+                  stroke-opacity="0.8" stroke-width="2.08886" stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+              <defs>
+                <filter id="filter0_ii_2_372" x="0.0551768" y="-0.296142" width="9.3999" height="16.4038"
+                  filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha" />
+                  <feOffset dx="-0.522216" dy="-0.522216" />
+                  <feGaussianBlur stdDeviation="0.261108" />
+                  <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                  <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.4 0" />
+                  <feBlend mode="normal" in2="shape" result="effect1_innerShadow_2_372" />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha" />
+                  <feOffset dx="0.522216" dy="0.522216" />
+                  <feGaussianBlur stdDeviation="0.261108" />
+                  <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                  <feColorMatrix type="matrix"
+                    values="0 0 0 0 0.127604 0 0 0 0 0.267969 0 0 0 0 0.408333 0 0 0 0.4 0" />
+                  <feBlend mode="normal" in2="effect1_innerShadow_2_372" result="effect2_innerShadow_2_372" />
+                </filter>
+                <linearGradient id="paint0_linear_2_372" x1="7.88843" y1="4.03518" x2="-42.5009" y2="37.8086"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#48647D" />
+                  <stop offset="0.234375" stop-color="#6B8299" />
+                  <stop offset="0.442708" stop-color="#DAE2EB" />
+                  <stop offset="0.682292" stop-color="#8CA2B7" />
+                  <stop offset="1" stop-color="#EDF2F7" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </a>
+          <div class="flex flex-col gap-[14px]">
+            <img src="img/feedback-avatar.png" alt="#" />
+            <div>
+              <p class="uppercase font-semibold font-Poppins text-[15px] text-secondary-500">
+                john smith
+              </p>
+              <p class="text-[12px] text-secondary-600">
+                Founder of Awesomeux Technology
+              </p>
+            </div>
+          </div>
+          <a href="#" class="bg-neutral-930 rounded-[8px] px-4 py-[13px] shadow-cardShadow">
+            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_ii_2_372)">
+                <path d="M1.62184 1.27051L7.88843 7.90572L1.62184 14.5409" stroke="url(#paint0_linear_2_372)"
+                  stroke-opacity="0.8" stroke-width="2.08886" stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+              <defs>
+                <filter id="filter0_ii_2_372" x="0.0551768" y="-0.296142" width="9.3999" height="16.4038"
+                  filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha" />
+                  <feOffset dx="-0.522216" dy="-0.522216" />
+                  <feGaussianBlur stdDeviation="0.261108" />
+                  <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                  <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.4 0" />
+                  <feBlend mode="normal" in2="shape" result="effect1_innerShadow_2_372" />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha" />
+                  <feOffset dx="0.522216" dy="0.522216" />
+                  <feGaussianBlur stdDeviation="0.261108" />
+                  <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                  <feColorMatrix type="matrix"
+                    values="0 0 0 0 0.127604 0 0 0 0 0.267969 0 0 0 0 0.408333 0 0 0 0.4 0" />
+                  <feBlend mode="normal" in2="effect1_innerShadow_2_372" result="effect2_innerShadow_2_372" />
+                </filter>
+                <linearGradient id="paint0_linear_2_372" x1="7.88843" y1="4.03518" x2="-42.5009" y2="37.8086"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#48647D" />
+                  <stop offset="0.234375" stop-color="#6B8299" />
+                  <stop offset="0.442708" stop-color="#DAE2EB" />
+                  <stop offset="0.682292" stop-color="#8CA2B7" />
+                  <stop offset="1" stop-color="#EDF2F7" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-neutral-930">
+    <div class="container">
+      <div class="pt-[50px] pb-[60px] flex flex-col gap-[100px] lg:flex-row xl:gap-[188px] xl:pb-[100px] xl:pt-[80px]">
+        <div class="flex flex-col gap-2 max-w-[406px]">
+          <p class="font-medium text-2xl">
+            Hai<span class="text-primary-650 font-bold">Doc</span>
+          </p>
+          <p class="text-[14px] leading-[25px] text-secondary-600">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book.
+          </p>
+        </div>
+        <div class="flex flex-col gap-[40px] items-start sm:flex-row xl:gap-[70px]">
+          <div class="flex flex-col gap-4">
+            <h4 class="font-Poppins text-[20] font-bold text-secondary-500">
+              Overview
+            </h4>
+            <div class="flex flex-col gap-[10px] text-[14px] text-secondary-600">
+              <a href="#">Checking Health</a>
+              <a href="#">Find Doctor</a>
+              <a href="#">Make a Schedule</a>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h4 class="font-Poppins text-[20] font-bold text-secondary-500">
+              Company
+            </h4>
+            <div class="flex flex-col gap-[10px] text-[14px] text-secondary-600">
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Services</a>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h4 class="font-Poppins text-[20] font-bold text-secondary-500">
+              Explore
+            </h4>
+            <div class="flex flex-col gap-[10px] text-[14px] text-secondary-600">
+              <a href="#">Terms & Conds</a>
+              <a href="#">Privacy Police</a>
+              <a href="#">Cookies</a>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h4 class="font-Poppins text-[20] font-bold text-secondary-500">
+              Social Media
+            </h4>
+            <div class="flex flex-row gap-3">
+              <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z"
+                    fill="#687B9E" />
+                </svg>
+              </a>
+              <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.002 21.041C9.54195 21.041 9.25195 21.028 8.29195 20.986C7.54332 20.9614 6.80439 20.8092 6.10695 20.536C4.90026 20.0664 3.94609 19.1119 3.47695 17.905C3.21426 17.205 3.07257 16.4655 3.05795 15.718C3.00195 14.76 3.00195 14.446 3.00195 12.005C3.00195 9.538 3.01495 9.25 3.05795 8.295C3.07289 7.54853 3.21457 6.81001 3.47695 6.111C3.94558 4.90253 4.9013 3.94718 6.10995 3.479C6.8086 3.21521 7.5473 3.07315 8.29395 3.059C9.24895 3.005 9.56295 3.005 12.002 3.005C14.482 3.005 14.767 3.018 15.712 3.059C16.4605 3.07327 17.2012 3.21531 17.902 3.479C19.1103 3.94771 20.0658 4.90288 20.535 6.111C20.8021 6.8202 20.9445 7.57026 20.956 8.328C21.012 9.28601 21.012 9.59901 21.012 12.039C21.012 14.479 20.998 14.799 20.956 15.746C20.9411 16.4942 20.799 17.2344 20.536 17.935C20.0656 19.1427 19.11 20.0976 17.902 20.567C17.2022 20.8292 16.4631 20.9709 15.716 20.986C14.761 21.041 14.448 21.041 12.002 21.041ZM11.968 4.588C9.52195 4.588 9.26795 4.6 8.31295 4.643C7.74294 4.65056 7.17843 4.75575 6.64395 4.954C5.85471 5.25601 5.23018 5.878 4.92495 6.666C4.72517 7.2063 4.61996 7.77698 4.61395 8.353C4.56095 9.322 4.56095 9.576 4.56095 12.005C4.56095 14.405 4.56995 14.696 4.61395 15.659C4.62291 16.2292 4.72805 16.7938 4.92495 17.329C5.23063 18.1165 5.85505 18.738 6.64395 19.04C7.17807 19.2396 7.7428 19.3448 8.31295 19.351C9.28095 19.407 9.53595 19.407 11.968 19.407C14.421 19.407 14.675 19.395 15.622 19.351C16.1924 19.3441 16.7573 19.2389 17.292 19.04C18.0764 18.7354 18.6969 18.1153 19.002 17.331C19.2014 16.7903 19.3065 16.2193 19.313 15.643H19.324C19.367 14.687 19.367 14.432 19.367 11.989C19.367 9.54601 19.356 9.289 19.313 8.334C19.304 7.76446 19.1988 7.20052 19.002 6.666C18.6976 5.88058 18.077 5.2593 17.292 4.954C16.7574 4.75475 16.1924 4.64953 15.622 4.643C14.655 4.588 14.402 4.588 11.968 4.588ZM12.002 16.624C10.1319 16.6252 8.44537 15.4997 7.72882 13.7725C7.01226 12.0452 7.40686 10.0563 8.72858 8.73347C10.0503 7.4106 12.0388 7.01428 13.7667 7.72934C15.4946 8.4444 16.6215 10.13 16.622 12C16.6192 14.5511 14.553 16.619 12.002 16.624ZM12.002 8.998C10.3451 8.998 9.00195 10.3412 9.00195 11.998C9.00195 13.6549 10.3451 14.998 12.002 14.998C13.6588 14.998 15.002 13.6549 15.002 11.998C14.9981 10.3427 13.6572 9.00185 12.002 8.998ZM16.802 8.28501C16.2074 8.2828 15.7269 7.79959 15.728 7.20501C15.7291 6.61043 16.2114 6.12901 16.806 6.12901C17.4005 6.12901 17.8828 6.61042 17.884 7.205C17.8842 7.49187 17.7702 7.76703 17.5672 7.96968C17.3642 8.17234 17.0888 8.2858 16.802 8.28501Z"
+                    fill="#687B9E" />
+                </svg>
+              </a>
+              <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M19.995 6.68799C20.8914 6.15208 21.5622 5.30823 21.882 4.31399C21.0397 4.81379 20.118 5.16587 19.157 5.35499C17.8246 3.94552 15.7135 3.60251 14.0034 4.51764C12.2933 5.43277 11.4075 7.37948 11.841 9.26999C8.39062 9.09676 5.17598 7.4669 2.99702 4.78599C1.85986 6.74741 2.44097 9.25477 4.32502 10.516C3.64373 10.4941 2.97754 10.3096 2.38202 9.97799C2.38202 9.99599 2.38202 10.014 2.38202 10.032C2.38241 12.0751 3.82239 13.8351 5.82502 14.24C5.19308 14.4119 4.53022 14.4372 3.88702 14.314C4.45022 16.0613 6.06057 17.2583 7.89602 17.294C6.37585 18.4871 4.49849 19.1342 2.56602 19.131C2.22349 19.1315 1.88123 19.1118 1.54102 19.072C3.50341 20.333 5.78738 21.0023 8.12002 21C11.3653 21.0223 14.484 19.7429 16.7787 17.448C19.0734 15.1531 20.3526 12.0342 20.33 8.78899C20.33 8.60299 20.3257 8.41799 20.317 8.23399C21.1575 7.62659 21.8828 6.87414 22.459 6.01199C21.676 6.35905 20.8455 6.58691 19.995 6.68799Z"
+                    fill="#687B9E" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
